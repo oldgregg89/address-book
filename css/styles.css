@@ -1,3 +1,13 @@
 #show-contact {
   display: none;
 }
+
+body {
+  background-image: url(https://img.freepik.com/free-vector/people-celebrating-together_52683-31243.jpg?size=626&ext=jpg);
+  color: red
+}
+
+.boxed {
+  background-color: honeydew;
+  border-style: ridge;
+}

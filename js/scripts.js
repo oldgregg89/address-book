@@ -14,6 +14,8 @@ AddressBook.prototype.assignId = function() {
   return this.currentId;
 }
 
+AddressBook.protot
+
 AddressBook.prototype.findContact = function(id) {
   for (let i=0; i< this.contacts.length; i++) {
     if (this.contacts[i]) {

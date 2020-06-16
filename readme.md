@@ -1,8 +1,8 @@
 # _Address book_
 
-#### _{Brief description of application}, 2020 ver 1.0_
+#### _, 2020 ver 1.0_
 
-#### By _Ian Gregg_
+#### By _Ian Gregg & Co-authored-by: Hannah Beinstein _
 [Address-book](https://github.com/oldgregg89/address-book)
 
 
@@ -25,9 +25,18 @@ _No known bugs_
 
 ## Specs
 
+| Behavior    | Input | Output |
+| :---------- | ----- | -----: |
+| First Name | Ian | Ian |
+| Last Name  | Gregg | Gregg |
+| email address  | IDG123@gmail.com | IDG123@gmail.com |
+| physical address | 123 Queen ann  |  123 Queen ann  |
+| Phone number | (541)6023620 | (541)6023620 |
+
+
 ## Support and contact details
 
-_Contact Ian Gregg: <iangregg188@gmail.com>_
+_Contact Ian Gregg: <iangregg188@gmail.com> & Hannah Beinstein <hannah.beinstein@gmail.com>_
 
 ## Technologies Used
 
