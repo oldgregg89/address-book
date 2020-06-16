@@ -1,6 +1,6 @@
 # _Address book_
 
-#### _, 2020 ver 1.0_
+#### _This takes in user input about their prersonal contacts and adds it to a personal database, 2020 ver 1.0_
 
 #### By _Ian Gregg & Co-authored-by: Hannah Beinstein _
 [Address-book](https://github.com/oldgregg89/address-book)
@@ -8,7 +8,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This takes in user input about their prersonal contacts and adds it to a personal database. By adding deatails such a first name, last name, phone, number, email, and physical address. The user can keep track of all their contacts._
 
 ## Setup/Installation Requirements
 
