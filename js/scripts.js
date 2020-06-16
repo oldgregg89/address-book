@@ -53,10 +53,11 @@ Contact.prototype.fullName = function() {
 
 Contact.entries.findEmptyInputs = function() {
   $("form:input").each(function() {
-    if(this.not("")) {
-        return .remove(this);
+    if(!$.trim("#new-email", "#new-personal-address", "#new-business-address").val()) {
+      ("#new-email", "#new-personal-address", "#new-business-address").prev("").andself().remove();
+  debugger;
   };
-}
+});
 
 // User Interface Logic ---------
 let addressBook = new AddressBook();
@@ -114,7 +115,8 @@ $(document).ready(function() {
     $("input#new-business-address").val("");
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedemail, inputtedPersonalAddress, inputtedBuinessAddress);
     addressBook.addContact(newContact);
-    //insert check contacts for NaN
+    Contact.entries.findEmptyInputs (newContact);
+    debugger;
     displayContactDetails(addressBook);
-  })
-})
+  });
+});
