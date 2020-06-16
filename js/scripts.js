@@ -14,8 +14,6 @@ AddressBook.prototype.assignId = function() {
   return this.currentId;
 }
 
-
-
 AddressBook.prototype.findContact = function(id) {
   for (let i=0; i< this.contacts.length; i++) {
     if (this.contacts[i]) {
@@ -51,6 +49,18 @@ function Contact(firstName, lastName, phoneNumber, email, personalAddress, busie
 
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
+}
+
+Contact.prototype.findEmptyInputs = function() {
+  $("form:input").each(function() {
+    if(this.not("")) {
+      (var i=0;i<=number;i++) {
+        return .remove(this);
+      } else {
+        return this;
+      }
+    }
+  };
 }
 
 // User Interface Logic ---------
