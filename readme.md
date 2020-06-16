@@ -30,7 +30,8 @@ _No known bugs_
 | First Name | Ian | Ian |
 | Last Name  | Gregg | Gregg |
 | email address  | IDG123@gmail.com | IDG123@gmail.com |
-| physical address | 123 Queen ann  |  123 Queen ann  |
+| personal address | 123 Queen ann  |  123 Queen ann  |
+| business address | 123 busy st  |  123 busy st  |
 | Phone number | (541)6023620 | (541)6023620 |
 
 

@@ -37,14 +37,26 @@ AddressBook.prototype.deleteContact = function(id) {
   return false;
 }
 
+// AddressBook.prototype.checkIfBlank = function(contact) {
+//   contact.forEach(function() {
+//     if (this.trim() !== "") { 
+//       this.hide();
+//     } else {
+//       this.show();
+//     }
+//   });
+//   return
+// }
+
 AddressBook.prototype.checkIfBlank = function(contact) {
-  this.forEach(function() {
-    if (this.trim() !== "") { 
-      this.hide();
+  contact.firstName(function() {
+    if (.trim() !== "") { 
+      $(".form-control").hide();
     } else {
-      this.show();
+      $(".form-control").show();
     }
   });
+  return
 }
 
 // Business Logic for Contacts ---------
@@ -129,7 +141,9 @@ $(document).ready(function() {
     $("input#new-business-address").val("");
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedemail, inputtedPersonalAddress, inputtedBuinessAddress);
     addressBook.addContact(newContact);
+    debugger;
     addressBook.checkIfBlank(newContact);
+    debugger;
     // newContact.findEmptyInputs();
     displayContactDetails(addressBook);
   });
