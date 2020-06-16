@@ -10,4 +10,6 @@ body {
 .boxed {
   background-color: honeydew;
   border-style: ridge;
+  padding-left: 10px;
+  padding-right: 10px;
 }

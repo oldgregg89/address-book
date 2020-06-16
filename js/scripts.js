@@ -37,6 +37,16 @@ AddressBook.prototype.deleteContact = function(id) {
   return false;
 }
 
+AddressBook.prototype.checkIfBlank = function(contact) {
+  this.forEach(function() {
+    if (this.trim() !== "") { 
+      this.hide();
+    } else {
+      this.show();
+    }
+  });
+}
+
 // Business Logic for Contacts ---------
 function Contact(firstName, lastName, phoneNumber, email, personalAddress, busienssAddress) {
   this.firstName = firstName,
@@ -51,13 +61,17 @@ Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
-Contact.entries.findEmptyInputs = function() {
-  $("form:input").each(function() {
-    if(!$.trim("#new-email", "#new-personal-address", "#new-business-address").val()) {
-      ("#new-email", "#new-personal-address", "#new-business-address").prev("").andself().remove();
-  debugger;
-  };
-});
+// Contact.prototype.findEmptyInputs = function() {
+//   $("form:input").each(function() {
+//   if ($('input.trim()' !== "")) { 
+//     $(this).hide();
+//     console.log('hiding');
+//   } else {
+//     $(this).show();
+//     console.log('showing');
+//   }
+// });
+// };
 
 // User Interface Logic ---------
 let addressBook = new AddressBook();
@@ -115,8 +129,8 @@ $(document).ready(function() {
     $("input#new-business-address").val("");
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedemail, inputtedPersonalAddress, inputtedBuinessAddress);
     addressBook.addContact(newContact);
-    Contact.entries.findEmptyInputs (newContact);
-    debugger;
+    addressBook.checkIfBlank(newContact);
+    // newContact.findEmptyInputs();
     displayContactDetails(addressBook);
   });
 });
