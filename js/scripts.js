@@ -51,15 +51,10 @@ Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
-Contact.prototype.findEmptyInputs = function() {
+Contact.entries.findEmptyInputs = function() {
   $("form:input").each(function() {
     if(this.not("")) {
-      (var i=0;i<=number;i++) {
         return .remove(this);
-      } else {
-        return this;
-      }
-    }
   };
 }
 
@@ -119,6 +114,7 @@ $(document).ready(function() {
     $("input#new-business-address").val("");
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedemail, inputtedPersonalAddress, inputtedBuinessAddress);
     addressBook.addContact(newContact);
+    //insert check contacts for NaN
     displayContactDetails(addressBook);
   })
 })
